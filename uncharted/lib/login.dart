@@ -42,8 +42,8 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       // Show error message
       final error = jsonDecode(response.body);
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('Login failed: ${error['message']}')));
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Login failed: ${error['message']}')));
     }
   }
 
